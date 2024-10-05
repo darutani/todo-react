@@ -9,5 +9,4 @@ ToDoアプリ
 - TypeScript
 - TailwindCSS
 - Vite
-- Prettier
-- ESLint
+- Biome
