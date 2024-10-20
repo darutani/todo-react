@@ -3,6 +3,7 @@ import { Trash2 } from "lucide-react";
 import type React from "react";
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
+import { Input } from "./ui/input";
 
 export default function TodoItem({
 	todo,
@@ -34,9 +35,9 @@ export default function TodoItem({
 				checked={todo.isDone}
 				onCheckedChange={handleIsDone}
 			/>
-			<input
+			<Input
 				type="text"
-				className=""
+				className="focus:ring-1 focus:ring-input"
 				value={todo.title}
 				onChange={handleTitle}
 			/>
