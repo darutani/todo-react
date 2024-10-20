@@ -22,6 +22,14 @@ function App() {
 		]);
 	};
 
+	const sortedTodos = [...todos];
+	sortedTodos.sort((m, n) => {
+		if (m.isDone !== n.isDone) {
+			return m.isDone ? 1 : -1;
+		}
+		return n.createdAt.getTime() - m.createdAt.getTime();
+	});
+
 	const updateTodo = (id: number, updateParams: Partial<Todo>) => {
 		setTodos((prevTodos) =>
 			prevTodos.map((todo) =>
@@ -39,7 +47,7 @@ function App() {
 			<Layout>
 				<AddTodo addTodo={addTodo} />
 				<TodoList
-					todos={todos}
+					todos={sortedTodos}
 					updateTodo={updateTodo}
 					deleteTodo={deleteTodo}
 				/>
