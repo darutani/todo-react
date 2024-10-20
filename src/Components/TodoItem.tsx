@@ -37,7 +37,7 @@ export default function TodoItem({
 			/>
 			<Input
 				type="text"
-				className="focus:ring-1 focus:ring-input"
+				className="border-none focus:ring-1 focus:ring-input shadow-none"
 				value={todo.title}
 				onChange={handleTitle}
 			/>

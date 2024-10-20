@@ -21,12 +21,7 @@ export default function AddTodo({ addTodo }: AddTodoProps) {
 		<div className="p-6">
 			<form className="w-full" onSubmit={handleSubmit}>
 				<div className="flex w-full items-center space-x-2">
-					<Input
-						type="text"
-						className="border border-input"
-						onChange={handleAddTitle}
-						value={title}
-					/>
+					<Input type="text" onChange={handleAddTitle} value={title} />
 					<Button type="submit" className="">
 						追加
 					</Button>
